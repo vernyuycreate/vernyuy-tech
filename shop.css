@@ -1,0 +1,33 @@
+/* shop page */
+.shop-hero{background:var(--ink);color:#fff;padding:56px 0 48px}
+.shop-hero h1{font-size:clamp(2.4rem,6vw,4.4rem)}
+.shop-hero p{color:#c5cad3;margin-top:12px;max-width:520px}
+.shop{display:grid;grid-template-columns:260px 1fr;gap:40px;padding:40px 24px 96px;align-items:start}
+.filters{position:sticky;top:88px;display:flex;flex-direction:column;gap:22px;max-height:calc(100vh - 110px);overflow:auto;padding-right:6px}
+.filters h4{font:700 .95rem var(--b);margin-bottom:8px}
+.filters label{display:flex;align-items:center;gap:10px;padding:4px 0;font-size:15px;cursor:pointer}
+.filters input[type=checkbox]{accent-color:var(--blue);width:16px;height:16px}
+.filters .row{display:flex;gap:8px}
+.filters input[type=number],.filters select,.bar select,.sbox input{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:24px}
+.sbox{flex:1;min-width:200px;position:relative}.sbox input{padding-left:16px;border-radius:999px}
+.bar select{width:auto;border-radius:999px}
+.count{font-weight:600;margin-right:auto;width:100%}
+.view{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.view button{padding:9px 14px;font-size:14px}.view button.on{background:var(--ink);color:#fff}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:28px 18px}
+.pgrid .card{flex:none}
+.pgrid.list{grid-template-columns:1fr;gap:16px}
+.pgrid.list .card{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;border:1px solid var(--line);border-radius:20px;padding:14px}
+.pgrid.list .card .ph{margin:0}
+.more{display:block;margin:48px auto 0}
+.nores{grid-column:1/-1;padding:56px 24px;text-align:center;border:1px dashed var(--line);border-radius:20px}
+.nores p{color:#5a606a;margin:8px 0 18px}
+.ftoggle,.fclose{display:none}
+@media(max-width:900px){
+.shop{grid-template-columns:1fr;padding-top:24px}
+.filters{position:fixed;inset:0 auto 0 0;width:min(340px,88vw);background:#fff;z-index:85;padding:72px 24px 24px;max-height:none;transform:translateX(-100%);transition:transform .35s}
+.filters.open{transform:none}
+.ftoggle{display:inline-block;padding:10px 18px;border:1px solid var(--line);border-radius:999px;font-weight:600}
+.fclose{display:block;position:absolute;top:18px;right:18px;width:40px;height:40px;border-radius:50%;background:var(--grey)}
+.pgrid.list .card{grid-template-columns:120px 1fr;gap:14px}}

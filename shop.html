@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop – Vernyuy Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body>
+<div id="nx-header"></div>
+<main>
+<section class="shop-hero dark"><div class="wrap">
+  <h1 id="ttl">All products</h1>
+  <p>Search, filter and sort the full demonstration catalogue.</p>
+</div></section>
+
+<div class="wrap shop">
+  <aside class="filters" id="filters" aria-label="Filters">
+    <button class="fclose" id="fclose" aria-label="Close filters">✕</button>
+    <div><h4>Category</h4><div id="fcat"></div></div>
+    <div><h4>Brand</h4><div id="fbrand"></div></div>
+    <div><h4>Price</h4><div class="row"><input type="number" id="pmin" min="0" placeholder="Min" aria-label="Minimum price"><input type="number" id="pmax" min="0" placeholder="Max" aria-label="Maximum price"></div></div>
+    <div><h4>Rating</h4><select id="frate" aria-label="Minimum rating"><option value="0">Any rating</option><option value="4">4 stars and up</option><option value="4.5">4.5 stars and up</option></select></div>
+    <div><h4>Availability</h4><label><input type="checkbox" id="fstock"> In stock only</label><label><input type="checkbox" id="fdisc"> Discounted only</label></div>
+    <button class="btn ghost" style="color:var(--ink)" id="clear">Clear filters</button>
+  </aside>
+
+  <div>
+    <div class="bar">
+      <button class="ftoggle" id="ftoggle">Filters</button>
+      <div class="sbox"><input type="search" id="q" placeholder="Search by name, brand or category" aria-label="Search products"></div>
+      <select id="sort" aria-label="Sort products">
+        <option value="featured">Featured</option><option value="new">Newest</option><option value="lo">Price: Low to High</option><option value="hi">Price: High to Low</option><option value="pop">Most Popular</option><option value="rate">Highest Rated</option>
+      </select>
+      <div class="view" role="group" aria-label="Layout"><button class="on" data-v="grid">Grid</button><button data-v="list">List</button></div>
+      <p class="count" id="count" role="status"></p>
+    </div>
+    <div class="pgrid" id="grid"></div>
+    <button class="btn ghost more" style="color:var(--ink)" id="more" hidden>Load more</button>
+  </div>
+</div>
+</main>
+<div id="nx-footer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="products.js"></script>
+<script src="app.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>

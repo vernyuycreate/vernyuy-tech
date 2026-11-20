@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vernyuy Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="shop.css">
+<link rel="stylesheet" href="category.css">
+</head>
+<body data-cat="phones">
+<div id="nx-header"></div>
+<main>
+<section class="cat-hero dark"><div class="wrap">
+  <div><h1 id="ch"></h1><p id="cp"></p><a class="btn" href="#list">Browse products</a></div>
+  <div id="cimg"></div>
+</div></section>
+<div class="wrap listing" id="list">
+  <div class="chips" id="chips" role="group" aria-label="Filter"></div>
+  <div class="bar">
+    <p class="count" id="count" role="status" style="width:auto"></p>
+    <label class="stk"><input type="checkbox" id="stk"> In stock only</label>
+    <select id="sort" aria-label="Sort products"><option value="featured">Featured</option><option value="disc">Biggest discount</option><option value="lo">Price: Low to High</option><option value="hi">Price: High to Low</option><option value="pop">Most Popular</option><option value="rate">Highest Rated</option></select>
+  </div>
+  <div class="pgrid" id="grid"></div>
+  <p style="margin-top:32px"><a class="btn ghost" style="color:var(--ink)" id="more" href="shop.html">See more in the shop</a></p>
+</div>
+<section class="guide"><div class="wrap"><h2>How to choose</h2><div class="g3" id="gt"></div></div></section>
+<section class="help"><div class="wrap"><h2>Need help choosing a device?</h2><div class="btns"><a class="btn" href="contact.html">Contact the store</a><a class="btn ghost" id="wa" target="_blank" rel="noopener" href="#">WhatsApp us</a></div></div></section>
+</main>
+<div id="nx-footer"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="products.js"></script>
+<script src="app.js"></script>
+<script src="category.js"></script>
+</body>
+</html>
